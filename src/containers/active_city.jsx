@@ -1,13 +1,17 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { selectCity } from '../actions';
 
 class ActiveCity extends Component {
   render() {
+
+
+
+    const src = `https://kitt.lewagon.com/placeholder/cities/${this.props.selectedCity.slug}`;
+
     return (
       <div className="city-info col-sm-5">
-        <img src="https://kitt.lewagon.com/placeholder/cities/paris" alt="" className="citypic"/>
+        <img src={src} alt="" className="citypic"/>
+        <h2>{this.props.selectedCity.name}</h2>
       </div>
     );
   };
