@@ -9,8 +9,13 @@ class City extends Component {
   }
   render() {
 
+    let classes = "card";
+    if (this.props.city === this.props.selectedCity) {
+      classes += " active-city";
+    }
+
     return (
-      <div className="card">
+      <div className={classes} onClick={this.handleClick}>
         <div className="card-description">
           <h2>{this.props.city.name}</h2>
           <p>{this.props.city.address}</p>
