@@ -1,3 +1,4 @@
+permalink: /index.html
 # redux-boilerplate
 
 Simple React + Redux starter with the following config:
